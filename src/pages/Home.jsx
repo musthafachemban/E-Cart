@@ -15,7 +15,7 @@ function Home() {
   const dispatch = useDispatch()
 
   return (
-    <div>
+    <div className='bg-black'>
       <Row className='ms-5 me-3 ' style={{marginTop:'150px'}}>
         { data?.length>0?
           data?.map((item)=>(<Col className='mb-5' sm={12} md={6} lg={4} xl={3}>
@@ -31,8 +31,8 @@ function Home() {
             <p className='fw-bolder'>Price : ₹ {item.price}</p>
           </Card.Text>
           <div className='d-flex justify-content-between align-items-center'>
-            <Button onClick={()=>dispatch(addToWishlist(item))} variant="outline-danger"><i class="fa-solid fa-heart "></i></Button>
-            <Button onClick={()=>dispatch(addToCart(item))} variant="outline-success"><i class="fa-solid fa-cart-plus "></i></Button>
+            <Button className='bg-black'onClick={()=>dispatch(addToWishlist(item))} variant="outline-danger"><i class="fa-solid fa-heart "></i></Button>
+            <Button className='bg-black' onClick={()=>dispatch(addToCart(item))} variant="outline-success"><i class="fa-solid fa-cart-plus " style={{color:'yellow'}}></i></Button>
           </div>
         </Card.Body>
       </Card>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     
-        <div style={{width:'100%',height:'300px'}} className='d-flex align-items-center justify-content-center flex-column bg-primary text-light'>
+        <div style={{width:'100%',height:'300px'}} className='d-flex align-items-center justify-content-center flex-column bg-danger text-light'>
       <div className='footer d-flex align-items-center justify-content-evenly w-100'>
         <div className="website" style={{width:'400px'}}>
           <h4 style={{overflowY:'hidden'}}><i className='fa-solid fa-cart-shopping'></i>{' '}

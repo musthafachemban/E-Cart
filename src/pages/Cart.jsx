@@ -34,11 +34,11 @@ function Cart() {
   }
 
   return (
-    <div className='mb-5' style={{marginTop:'100px'}}>
+    <div className='mb-5 ' style={{marginTop:'100px'}}>
       { cartArray?.length>0?
       <div className="row w-100">
         
-        <div className="col-lg-6 m-5">
+        <div className="col-lg-6 m-5 ">
           <table className='table shadow border'>
             <thead>
               <tr>
@@ -56,7 +56,7 @@ function Cart() {
                 <td>{item.title}</td>
                 <td> <img style={{width:'50px', height:'50px'}} src={item.image}></img> </td>
                 <td>₹ {item.price}</td>
-                <td> <Button onClick={()=>dispatch(removeFromCart(item.id))} varient="outline-danger"><i class="fa-solid fa-trash-can "></i></Button> </td>
+                <td> <Button className='bg-black' onClick={()=>dispatch(removeFromCart(item.id))} varient="outline-danger"><i class="fa-solid fa-trash-can  " style={{color:'red'}} ></i></Button> </td>
               </tr>
 
               ))
@@ -64,7 +64,7 @@ function Cart() {
             </tbody>
           </table>
         </div> 
-        <div  className='col-lg-4 d-flex justify-content-center align-items-center flex-column'>
+        <div  className='col-lg-4 d-flex justify-content-center align-items-center flex-column bg-black'>
           <div className="border shadow p-5">
           <h3 className='text-success'>Cart summary</h3>
           <h4>Total number of products : <span className='fw-bolder fs-2 text-warning'>{cartArray.length}</span> </h4>
